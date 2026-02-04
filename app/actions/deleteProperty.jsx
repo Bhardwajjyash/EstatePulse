@@ -28,7 +28,7 @@ async function deleteProperty(propertyId) {
   //delete from cloudinary
   if (publicIds.length > 0) {
     for (let publicId of publicIds) {
-      await cloudinary.uploader.destroy("/propertypulse/" + publicId);
+      await cloudinary.uploader.destroy("/EstatePulse/" + publicId);
     }
   }
   await prisma.property.delete({
