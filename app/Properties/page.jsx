@@ -2,6 +2,7 @@
 
 import PropertyCard from '@/comonents/PropertyCard';
 import {prisma} from '@/lib/prisma'
+export const dynamic = "force-dynamic";
 
 const PropertiesPage = async() => {
   const properties = await prisma.property.findMany({

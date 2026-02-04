@@ -13,7 +13,7 @@ async function addMessage(formData) {
   const { userId } = sessionUser;
   const recipient =  formData.get('recipient')
   if(userId === recipient){
-    return(error:'You can not send Message to yourself ')
+    return{error:'You can not send Message to yourself '}
   }
 }
 
